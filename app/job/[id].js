@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator, Button } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
-import { useBookmarks } from '../../src/context/BookmarkContext'; // Use context
+import { useBookmarks } from '../../src/context/BookmarkContext'; 
 
 export default function JobDetailsScreen() {
   const { id } = useLocalSearchParams();
@@ -9,7 +9,7 @@ export default function JobDetailsScreen() {
   const { bookmarks, addBookmark, removeBookmark, loading, error } = useBookmarks();
 
   useEffect(() => {
-    // Simulating fetching job details (replace with your actual fetch logic)
+    
     const fetchJob = async () => {
       setJob({
         id,

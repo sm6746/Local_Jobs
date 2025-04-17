@@ -52,12 +52,11 @@ export default function JobsScreen() {
       <FlatList
         data={jobs}
         keyExtractor={(item) => {
-          // Check if 'id' exists and is a valid value
+          
           if (item?.id) {
             return item.id.toString();
           }
-          // Fallback if 'id' is undefined
-          return `job_${Math.random().toString(36).substr(2, 9)}`; // Fallback to random string
+          return `job_${Math.random().toString(36).substr(2, 9)}`; 
         }}
         renderItem={renderJob}
         onEndReached={loadJobs}

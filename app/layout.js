@@ -1,4 +1,4 @@
-// app/_layout.js
+
 import { Tabs } from 'expo-router';
 import { BookmarkProvider } from '../src/context/BookmarkContext';
 import { Ionicons } from '@expo/vector-icons';

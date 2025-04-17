@@ -1,4 +1,4 @@
-// src/components/JobCard.js
+
 import React, { useRef, useEffect } from 'react';
 import { 
   View, 
@@ -16,13 +16,13 @@ const JobCard = ({ job, onPress, index = 0 }) => {
   const { isBookmarked, addBookmark, removeBookmark } = useBookmarks();
   const bookmarked = isBookmarked(job.id);
   
-  // Animation values
+  
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const scaleAnim = useRef(new Animated.Value(0.95)).current;
   const bookmarkScale = useRef(new Animated.Value(1)).current;
 
   useEffect(() => {
-    // Stagger the animation based on the index for a cascade effect
+    
     const delay = index * 100;
     
     Animated.parallel([
@@ -44,7 +44,7 @@ const JobCard = ({ job, onPress, index = 0 }) => {
   }, [fadeAnim, scaleAnim, index]);
 
   const handleBookmarkPress = () => {
-    // Animate the bookmark button when pressed
+   
     Animated.sequence([
       Animated.timing(bookmarkScale, {
         toValue: 1.2,

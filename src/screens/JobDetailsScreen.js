@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Button, StyleSheet, ActivityIndicator, ScrollView } from 'react-native';
-import { useLocalSearchParams } from 'expo-router'; // Assuming you're using expo-router
-import { useBookmarks } from '../../src/context/BookmarkContext'; // Correct path to your context
-import { fetchJobs } from '../../src/api/jobsApi'; // Assuming you have an API to fetch jobs
+import { useLocalSearchParams } from 'expo-router'; 
+import { useBookmarks } from '../../src/context/BookmarkContext'; 
+import { fetchJobs } from '../../src/api/jobsApi'; 
 
 export default function JobDetailsScreen() {
-  const { id } = useLocalSearchParams(); // Get the job ID from the URL params
+  const { id } = useLocalSearchParams(); 
   const [job, setJob] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { bookmarks, addBookmark, removeBookmark } = useBookmarks(); // Accessing the context
+  const { bookmarks, addBookmark, removeBookmark } = useBookmarks(); 
 
   useEffect(() => {
     const loadJob = async () => {
       try {
-        const data = await fetchJobs(); // Fetch the job data
+        const data = await fetchJobs(); 
         const selectedJob = data.results.find((j) => j.id.toString() === id.toString());
         setJob(selectedJob);
         setLoading(false);

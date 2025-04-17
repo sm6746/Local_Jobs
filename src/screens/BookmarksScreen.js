@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, Button, FlatList, StyleSheet } from 'react-native';
-import { useBookmarks } from '../../src/context/BookmarkContext'; // Importing the context
+import { useBookmarks } from '../../src/context/BookmarkContext'; 
 
 export default function BookmarksScreen() {
-  const { bookmarks } = useBookmarks(); // Access the bookmark context
+  const { bookmarks } = useBookmarks(); 
 
   if (bookmarks.length === 0) {
     return (

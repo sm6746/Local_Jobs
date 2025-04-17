@@ -1,4 +1,4 @@
-// src/components/NetworkStatus.js
+
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Animated } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
@@ -12,7 +12,7 @@ const NetworkStatus = () => {
     const unsubscribe = NetInfo.addEventListener(state => {
       setIsConnected(state.isConnected);
       
-      // Animate the banner in or out based on connection status
+      
       Animated.timing(slideAnim, {
         toValue: state.isConnected ? -50 : 0,
         duration: 300,

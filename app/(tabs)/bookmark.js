@@ -1,4 +1,4 @@
-// app/bookmarks.js
+
 import { View, Text, FlatList, Button } from 'react-native';
 import { useBookmarks } from '../../src/context/BookmarkContext';
 

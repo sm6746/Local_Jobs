@@ -1,4 +1,4 @@
-// src/components/CustomRefreshControl.js
+
 import React, { useRef, useEffect } from 'react';
 import { View, Animated, StyleSheet, Easing } from 'react-native';
 import { RefreshControl } from 'react-native';
