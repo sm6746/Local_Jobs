@@ -1,4 +1,4 @@
-# LokalJobs
+# LocalJobs
 
 A React Native mobile application built with Expo for browsing and managing local job listings. The app provides a seamless experience for job seekers to discover, view, and bookmark job opportunities in their area.
 
